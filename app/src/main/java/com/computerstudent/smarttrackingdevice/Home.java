@@ -37,6 +37,7 @@ import com.computerstudent.smarttrackingdevice.activity_battery.Battery;
 import com.computerstudent.smarttrackingdevice.activity_call.CallLog;
 import com.computerstudent.smarttrackingdevice.activity_location.DeviceLocation;
 import com.computerstudent.smarttrackingdevice.activity_history.LocationHistory;
+import com.computerstudent.smarttrackingdevice.activity_sms.smsLog;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
@@ -113,7 +114,7 @@ public class Home extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(Home.this, LocationHistory.class);
                 startActivity(intent);
-                Toast.makeText(Home.this, "History Enter", Toast.LENGTH_LONG).show();
+
 
             }
         });
@@ -129,7 +130,8 @@ public class Home extends AppCompatActivity {
         buttonSms.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(Home.this, "SMS Enter", Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(Home.this, smsLog.class);
+                startActivity(intent);
 
             }
         });
@@ -138,7 +140,7 @@ public class Home extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(Home.this, Battery.class);
                 startActivity(intent);
-                Toast.makeText(Home.this, "Battery Enter", Toast.LENGTH_LONG).show();
+
 
             }
         });
@@ -147,7 +149,7 @@ public class Home extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(Home.this, About.class);
                 startActivity(intent);
-                Toast.makeText(Home.this, "Alert Enter", Toast.LENGTH_LONG).show();
+
 
             }
         });

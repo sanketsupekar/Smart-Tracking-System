@@ -10,6 +10,7 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_SMS"/>
     <uses-permission android:name="android.permission.READ_CALL_LOG" />
     <uses-permission android:name="android.permission.BATTERY" />
 
@@ -21,8 +22,7 @@
         android:roundIcon="@mipmap/ic_icon_foreground"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity_about.About"></activity>
-        <!--
+       <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
              Note that the API key is linked to the encryption key used to sign the APK.
@@ -37,10 +37,16 @@
         <activity
             android:name=".activity_history.LocationHistory"
             android:label="Location History" />
-        <activity android:name=".activity_battery.Battery"
-            android:label="Battery"/>
-        <activity android:name=".activity_call.CallLog"
-            android:label="Call Log"/>
+        <activity
+            android:name=".activity_battery.Battery"
+            android:label="Battery" />
+        <activity
+            android:name=".activity_call.CallLog"
+            android:label="Call Log" />
+        <activity android:name=".activity_sms.smsLog"
+            android:label="SMS Log">
+
+        </activity>
         <activity
             android:name=".activity_location.DeviceLocation"
             android:label="Location" />
@@ -70,10 +76,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Home"
-            android:label="Home"/>
-        <activity android:name=".Login"
-            android:label="Login"/>
+        <activity
+            android:name=".Home"
+            android:label="Home" />
+        <activity
+            android:name=".Login"
+            android:label="Login" />
         <activity android:name=".MainActivity" />
     </application>
 

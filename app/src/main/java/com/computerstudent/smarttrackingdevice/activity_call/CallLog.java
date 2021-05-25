@@ -35,9 +35,7 @@ public class CallLog extends AppCompatActivity {
 public int textViewId=0;
 public LinearLayout lLayout;
 public LinearLayout.LayoutParams params;
-public TextView showCallLog;
-private DatabaseReference databaseReference;
-String battery, direction, lat,log,satellite, signalquality, speed;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,29 +56,10 @@ String battery, direction, lat,log,satellite, signalquality, speed;
                 ActivityCompat.requestPermissions(CallLog.this,
                         new String[]{Manifest.permission.READ_CALL_LOG}, 1);
             }
-        } else {
+        }
+        else {
+            getCallDetails();
 
-            databaseReference = FirebaseDatabase.getInstance().getReference("gpsTracker/locationInfo");
-            ValueEventListener listener = databaseReference.addValueEventListener(new ValueEventListener() {
-                @Override
-                public void onDataChange(@NonNull DataSnapshot snapshot) {
-                    try {
-                        battery =snapshot.child("Battery").getValue().toString();
-                        Toast.makeText(CallLog.this,battery,Toast.LENGTH_SHORT).show();
-                        getCallDetails();
-
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                    }
-                }
-
-                @Override
-                public void onCancelled(@NonNull DatabaseError error) {
-
-                    Toast.makeText(CallLog.this,"Fail",Toast.LENGTH_SHORT).show();
-
-                }
-            });
         }
         final ScrollView scrollView = (ScrollView) findViewById(R.id.scrollViewLayout);
         scrollView.post(new Runnable() {
@@ -98,7 +77,6 @@ String battery, direction, lat,log,satellite, signalquality, speed;
                           Manifest.permission.READ_CALL_LOG)  == PackageManager.PERMISSION_GRANTED) {
 
                       Toast.makeText(this,"Permission Granted", Toast.LENGTH_SHORT).show();
-                      getCallDetails();
 
                   }
                 } else {
