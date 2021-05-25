@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Home"
-android:id="@+id/drawerLayout"
+    android:id="@+id/drawerLayout"
     android:background="@drawable/background_login_page">
 
 
@@ -314,14 +314,6 @@ android:id="@+id/drawerLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolBar"
-            app:title=" "
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@android:color/transparent"
-            android:minHeight="?attr/actionBarSize"
-            app:titleTextColor="#000000" />
         <FrameLayout
             android:id="@+id/framelayout"
             android:layout_width="fill_parent"

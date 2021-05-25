@@ -53,6 +53,7 @@ public class Home extends AppCompatActivity {
     Toolbar toolbar;
     FrameLayout frameLayout;
     NavigationView navigationView;
+    ActionBarDrawerToggle actionBarDrawerToggle;
     Button buttonLocation, buttonHistory, buttonCall, buttonSms, buttonBattery, buttonAlert;
 
 
@@ -60,10 +61,8 @@ public class Home extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-
         drawerLayout = findViewById(R.id.drawerLayout);
         coordinatorLayout = findViewById(R.id.coordinateLayout);
-        toolbar = findViewById(R.id.toolBar);
         frameLayout = findViewById(R.id.framelayout);
         navigationView = findViewById(R.id.navigationView);
         buttonLocation = findViewById(R.id.buttonLocation);
@@ -73,12 +72,14 @@ public class Home extends AppCompatActivity {
         buttonBattery = findViewById(R.id.buttonBattery);
         buttonAlert = findViewById(R.id.buttonAlert);
 
-        setUpToolbar();
-        final ActionBarDrawerToggle actionBarDrawerToggle = new ActionBarDrawerToggle(Home.this, drawerLayout,
+       //setUpToolbar();
+        actionBarDrawerToggle = new ActionBarDrawerToggle(Home.this, drawerLayout,
                 R.string.open_drawer,
                 R.string.close_drawer);
         drawerLayout.addDrawerListener(actionBarDrawerToggle);
         actionBarDrawerToggle.syncState();
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setHomeButtonEnabled(true);
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @SuppressLint("NonConstantResourceId")
             @Override
@@ -163,6 +164,9 @@ public class Home extends AppCompatActivity {
     }
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if (actionBarDrawerToggle.onOptionsItemSelected(item)) {
+            return true;
+        }
         int id = item.getItemId();
         if (id == android.R.id.home) {
             drawerLayout.openDrawer(GravityCompat.START);

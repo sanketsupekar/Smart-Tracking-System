@@ -1,6 +1,7 @@
 package com.computerstudent.smarttrackingdevice.activity_battery;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.NotificationCompat;
 
@@ -33,6 +34,8 @@ public class Battery extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_battery);
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setDisplayHomeAsUpEnabled(true);
         batteryPercent=findViewById(R.id.showBatteryPercent);
         batteryProgressBar=findViewById(R.id.vertical_progressbar);
         databaseReference = FirebaseDatabase.getInstance().getReference("gpsTracker/locationInfo");
@@ -43,7 +46,6 @@ public class Battery extends AppCompatActivity {
                     updateBatteryPercent=snapshot.child("Battery").getValue().toString();
                     batteryProgressBar.setProgress(Integer.parseInt(updateBatteryPercent));
                     batteryPercent.setText(updateBatteryPercent+"%");
-                  //  addNotification("Battery Alert",updateBatteryPercent);
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
@@ -56,30 +58,5 @@ public class Battery extends AppCompatActivity {
         });
     }
 
-    private void addNotification(String msg,String updateBatteryPercent) {
-        String message,batteryPercent;
-        message=msg;
-        batteryPercent=updateBatteryPercent;
-        NotificationCompat.Builder builder =
-                new NotificationCompat.Builder(this)
-                        .setSmallIcon(R.drawable.ic_launcher_background) //set icon for notification
-                        .setContentTitle(msg) //set title of notification
-                        .setContentText(batteryPercent+"% Battery Remainning")//this is notification message
-                        .setAutoCancel(true) // makes auto cancel of notification
-                        .setPriority(NotificationCompat.PRIORITY_DEFAULT); //set priority of notification
 
-
-        Intent notificationIntent = new Intent(this, Battery.class);
-        notificationIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        //notification message will get at NotificationView
-
-        PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, notificationIntent, PendingIntent.FLAG_UPDATE_CURRENT);
-        builder.setContentIntent(pendingIntent);
-        long[] pattern = {500,500};
-        builder.setVibrate(pattern);
-
-        // Add as notification
-        NotificationManager manager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
-        manager.notify(0, builder.build());
-    }
 }
