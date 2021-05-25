@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Smart Tracking Device</string>
+
+    <string name="peferance_file_name">Tracker Preferance</string>
+    <string name="home">Home</string>
+    <string name="open_drawer">open_drawer</string>
+    <string name="close_drawer">close_drawer</string>
+    <string name="title_activity_location">Map</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="title_activity_location_his">Map</string>
+
+</resources>

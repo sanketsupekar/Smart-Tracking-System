@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_alignWithParentIfMissing="false"
+    android:background="@drawable/slide_background"
+    tools:context=".onBordingSlide.SliderBackground">
+
+  <androidx.viewpager.widget.ViewPager
+      android:id="@+id/slideViewPager"
+      android:layout_width="wrap_content"
+      android:layout_height="622dp"
+      android:layout_alignParentStart="true"
+      android:layout_alignParentTop="true"
+      android:layout_alignParentEnd="true"
+      android:layout_marginStart="-1dp"
+      android:layout_marginTop="-3dp"
+      android:layout_marginEnd="1dp"
+      android:layout_marginBottom="55dp" />
+
+  <LinearLayout
+      android:id="@+id/dotsLayout"
+      android:layout_width="121dp"
+      android:layout_height="61dp"
+      android:layout_alignParentTop="false"
+      android:layout_alignParentBottom="true"
+      android:layout_centerHorizontal="true"
+      android:layout_marginStart="54dp"
+      android:layout_marginEnd="12dp"
+      android:layout_marginBottom="3dp"
+      android:layout_toStartOf="@+id/nextBtn"
+      android:layout_toEndOf="@+id/prevBtn"
+      android:orientation="horizontal"
+      android:textAlignment="center"
+      android:visibility="visible"
+      tools:visibility="visible"></LinearLayout>
+
+  <Button
+      android:id="@+id/prevBtn"
+      android:layout_width="101dp"
+      android:layout_height="58dp"
+      android:layout_alignParentStart="true"
+      android:layout_alignParentBottom="true"
+      android:layout_marginStart="2dp"
+      android:layout_marginBottom="-1dp"
+      android:backgroundTint="@android:color/transparent"
+      android:textSize="16sp"
+      android:textColor="@color/colorTransparentWhite"
+      android:visibility="invisible" />
+
+  <Button
+      android:id="@+id/nextBtn"
+      android:layout_width="110dp"
+      android:layout_height="58dp"
+      android:layout_alignParentEnd="true"
+      android:layout_alignParentBottom="true"
+      android:layout_marginEnd="11dp"
+      android:layout_marginBottom="-1dp"
+      android:backgroundTint="@android:color/transparent"
+      android:textAlignment="textEnd"
+      android:textColor="@color/colorTransparentWhite"
+      android:textSize="16sp"
+      android:visibility="visible" />
+
+
+</RelativeLayout>

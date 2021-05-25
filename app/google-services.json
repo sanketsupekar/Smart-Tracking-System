@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "626445121689",
+    "firebase_url": "https://pioneering-flag-294609.firebaseio.com",
+    "project_id": "pioneering-flag-294609",
+    "storage_bucket": "pioneering-flag-294609.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:626445121689:android:32db290da0e1020ed86008",
+        "android_client_info": {
+          "package_name": "com.computerstudent.smarttrackingdevice"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "626445121689-p0ko3uegptt93lamn4g27n16kjlos6fu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.computerstudent.smarttrackingdevice",
+            "certificate_hash": "d474bb68c2b49e2bd9872aef8c688c97665b3556"
+          }
+        },
+        {
+          "client_id": "626445121689-rtphv3m1hn7h3knr59erbgtecsu6v4g3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDkzeheT-G9Mv84hbiG-v_9qR5_M9f3_Qk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "626445121689-rtphv3m1hn7h3knr59erbgtecsu6v4g3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

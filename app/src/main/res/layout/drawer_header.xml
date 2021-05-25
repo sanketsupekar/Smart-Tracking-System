@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="230dp"
+    android:background="@drawable/gps_icon_back">
+
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="120dp"
+        android:src="@drawable/gps_icon_header"
+        android:layout_centerHorizontal="true">
+
+    </ImageView>
+    <EditText
+        android:id="@+id/textTrackerId"
+        android:layout_width="110dp"
+        android:layout_height="50dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/round_button"
+        android:drawableLeft="@drawable/ic_login_trackerid"
+        android:drawablePadding="10dp"
+        android:paddingStart="10dp"
+        android:text="GPS01"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:focusable="false"/>
+    <EditText
+        android:id="@+id/textTrackerStatus"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/textTrackerId"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/round_button"
+        android:text="Offline"
+        android:drawablePadding="50dp"
+        android:focusable="false"
+        android:paddingStart="10dp"
+        android:textColor="#000000"
+        android:textStyle="bold" />
+
+
+
+
+</RelativeLayout>
