@@ -1,5 +1,6 @@
 package com.computerstudent.smarttrackingdevice;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
@@ -13,18 +14,47 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
 public class Login extends AppCompatActivity {
     EditText trackerid, password;
     Button login;
     boolean loginComplete;
-    String validTrackerid="GPS01";
-    String validPassword="12345";
+    String validTrackerid;
+    String validPassword;
+    private DatabaseReference databaseReference;
     SharedPreferences sharedPreferance;
 
     @SuppressLint("StringFormatInvalid")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        databaseReference = FirebaseDatabase.getInstance().getReference("gpsTracker/login");
+        ValueEventListener listener = databaseReference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                try {
+                    validTrackerid=snapshot.child("username").getValue().toString();
+                    validPassword=snapshot.child("password").getValue().toString();
+
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                Toast.makeText(Login.this, "Network Error ! Check Network Connection", Toast.LENGTH_SHORT).show();
+
+            }
+        });
         sharedPreferance=getSharedPreferences(getString(R.string.peferance_file_name),Context.MODE_PRIVATE);
         Boolean isLoggedIn=sharedPreferance.getBoolean("isLoggedIn",false);
         setContentView(R.layout.activity_login);

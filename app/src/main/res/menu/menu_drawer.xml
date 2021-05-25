@@ -6,14 +6,6 @@
     android:icon="@drawable/ic_home">
 </item>
     <item
-        android:id="@+id/profile"
-        android:title="Profile"
-        android:icon="@drawable/ic_profile" />
-    <item
-        android:id="@+id/setting"
-        android:title="Settings"
-        android:icon="@drawable/ic_settings" />
-    <item
         android:id="@+id/aboutus"
         android:title="About Us"
         android:icon="@drawable/ic_aboutus" />

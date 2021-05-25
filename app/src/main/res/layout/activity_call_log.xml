@@ -17,19 +17,6 @@
             android:layout_height="fill_parent"
             android:orientation="vertical"
             android:id="@+id/linearLayout">
-            <TextView
-                android:id="@+id/showCallLog"
-                android:layout_width="300dp"
-                android:layout_height="50dp"
-                android:layout_marginTop="50dp"
-                android:layout_marginStart="30dp"
-                android:background="@drawable/receive_round_box"
-                android:textColor="@color/black"
-                android:textStyle="bold"
-                android:textSize="15dp">
-
-            </TextView>
-
         </LinearLayout>
     </ScrollView>
 

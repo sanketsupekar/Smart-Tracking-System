@@ -13,6 +13,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.provider.Settings;
+import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -52,7 +53,6 @@ public class Home extends AppCompatActivity {
     Toolbar toolbar;
     FrameLayout frameLayout;
     NavigationView navigationView;
-    ActionBarDrawerToggle toggle;
     Button buttonLocation, buttonHistory, buttonCall, buttonSms, buttonBattery, buttonAlert;
 
 
@@ -74,7 +74,7 @@ public class Home extends AppCompatActivity {
         buttonAlert = findViewById(R.id.buttonAlert);
 
         setUpToolbar();
-        ActionBarDrawerToggle actionBarDrawerToggle = new ActionBarDrawerToggle(Home.this, drawerLayout,
+        final ActionBarDrawerToggle actionBarDrawerToggle = new ActionBarDrawerToggle(Home.this, drawerLayout,
                 R.string.open_drawer,
                 R.string.close_drawer);
         drawerLayout.addDrawerListener(actionBarDrawerToggle);
@@ -85,13 +85,7 @@ public class Home extends AppCompatActivity {
             public boolean onNavigationItemSelected(MenuItem item) {
                 switch (item.getItemId()) {
                     case R.id.home:
-                        Toast.makeText(getApplicationContext(), "Home", Toast.LENGTH_SHORT).show();
-                        break;
-                    case R.id.profile:
-                        Toast.makeText(getApplicationContext(), "Profile", Toast.LENGTH_SHORT).show();
-                        break;
-                    case R.id.setting:
-                        Toast.makeText(getApplicationContext(), "Setting", Toast.LENGTH_SHORT).show();
+                        drawerLayout.closeDrawer(Gravity.LEFT);
                         break;
                     case R.id.aboutus:
                         Toast.makeText(getApplicationContext(), "About Us", Toast.LENGTH_SHORT).show();
