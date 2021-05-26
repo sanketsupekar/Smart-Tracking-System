@@ -3,19 +3,18 @@ package com.computerstudent.smarttrackingdevice.activity_about;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.view.GravityCompat;
 
 import android.os.Bundle;
 import android.view.MenuItem;
 
 import com.computerstudent.smarttrackingdevice.R;
 
-public class About extends AppCompatActivity {
+public class about_project extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_about);
+        setContentView(R.layout.about_project);
         ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
 

@@ -1,23 +1,13 @@
  package com.computerstudent.smarttrackingdevice;
 
 import android.annotation.SuppressLint;
-import android.app.Notification;
-import android.app.NotificationManager;
-import android.app.PendingIntent;
-import android.content.Context;
 import android.content.Intent;
-import android.graphics.Color;
-import android.media.RingtoneManager;
-import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
-import android.os.Handler;
-import android.provider.Settings;
 import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.Toast;
 
@@ -27,28 +17,20 @@ import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
-import androidx.core.app.NotificationCompat;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
-import com.computerstudent.smarttrackingdevice.activity_about.About;
+import com.computerstudent.smarttrackingdevice.activity_about.About_Tracker;
+import com.computerstudent.smarttrackingdevice.activity_about.about_project;
 import com.computerstudent.smarttrackingdevice.activity_battery.Battery;
 
 import com.computerstudent.smarttrackingdevice.activity_call.CallLog;
 import com.computerstudent.smarttrackingdevice.activity_location.DeviceLocation;
 import com.computerstudent.smarttrackingdevice.activity_history.LocationHistory;
 import com.computerstudent.smarttrackingdevice.activity_sms.smsLog;
-import com.google.android.gms.maps.CameraUpdateFactory;
-import com.google.android.gms.maps.model.LatLng;
-import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.material.navigation.NavigationView;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 
-public class Home extends AppCompatActivity {
+ public class Home extends AppCompatActivity {
     DrawerLayout drawerLayout;
     CoordinatorLayout coordinatorLayout;
     Toolbar toolbar;
@@ -90,7 +72,8 @@ public class Home extends AppCompatActivity {
                         drawerLayout.closeDrawer(Gravity.LEFT);
                         break;
                     case R.id.aboutus:
-                        Toast.makeText(getApplicationContext(), "About Us", Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(Home.this, about_project.class);
+                        startActivity(intent);
                         break;
                     case R.id.feedback:
                         Toast.makeText(getApplicationContext(), "Feedback", Toast.LENGTH_SHORT).show();
@@ -147,7 +130,7 @@ public class Home extends AppCompatActivity {
         buttonAlert.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Home.this, About.class);
+                Intent intent = new Intent(Home.this, About_Tracker.class);
                 startActivity(intent);
 
 
