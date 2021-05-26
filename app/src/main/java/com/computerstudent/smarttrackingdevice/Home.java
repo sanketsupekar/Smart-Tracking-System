@@ -22,6 +22,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.computerstudent.smarttrackingdevice.activity_about.About_Tracker;
 import com.computerstudent.smarttrackingdevice.activity_about.about_project;
+import com.computerstudent.smarttrackingdevice.activity_about.contact_us;
 import com.computerstudent.smarttrackingdevice.activity_battery.Battery;
 
 import com.computerstudent.smarttrackingdevice.activity_call.CallLog;
@@ -72,8 +73,10 @@ import com.google.android.material.navigation.NavigationView;
                         drawerLayout.closeDrawer(Gravity.LEFT);
                         break;
                     case R.id.aboutus:
-                        Intent intent = new Intent(Home.this, about_project.class);
-                        startActivity(intent);
+                        startActivity(new Intent(Home.this, about_project.class));
+                        break;
+                    case R.id.contactus:
+                        startActivity(new Intent(Home.this, contact_us.class));
                         break;
                     case R.id.feedback:
                         Toast.makeText(getApplicationContext(), "Feedback", Toast.LENGTH_SHORT).show();

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_login_page"
+    android:gravity="center"
+    tools:context=".activity_about.contact_us">
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:id="@+id/imgFacbook"
+            android:layout_width="100sp"
+            android:layout_height="100sp"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:onClick="onClick"
+            android:scaleType="fitCenter"
+            android:backgroundTint="@color/white"
+            android:src="@drawable/facebook">
+        </ImageButton>
+
+        <ImageButton
+            android:id="@+id/imgWhatsapp"
+            android:layout_width="100sp"
+            android:layout_height="100sp"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:backgroundTint="@color/white"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:onClick="onClick"
+            android:scaleType="fitCenter"
+            android:src="@drawable/whatsapp" />
+
+        <ImageButton
+            android:id="@+id/imgInstagram"
+            android:layout_width="100sp"
+            android:layout_height="100sp"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:onClick="onClick"
+            android:backgroundTint="@color/white"
+            android:scaleType="fitCenter"
+            android:src="@drawable/instagram" />
+
+        <ImageButton
+            android:id="@+id/imgGithub"
+            android:layout_width="100sp"
+            android:layout_height="100sp"
+            android:layout_row="1"
+            android:layout_column="1"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:onClick="onClick"
+            android:backgroundTint="@color/white"
+            android:scaleType="fitCenter"
+            android:src="@drawable/github" />
+
+        <ImageButton
+            android:id="@+id/imgGmail"
+            android:layout_width="100sp"
+            android:layout_height="100sp"
+            android:layout_row="2"
+            android:layout_column="0"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:onClick="onClick"
+            android:backgroundTint="@color/white"
+            android:scaleType="fitCenter"
+            android:src="@drawable/gmail" />
+
+        <ImageButton
+            android:id="@+id/imgYoutube"
+            android:layout_width="100sp"
+            android:layout_height="100sp"
+            android:layout_row="2"
+            android:layout_column="1"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:onClick="onClick"
+            android:scaleType="fitCenter"
+            android:backgroundTint="@color/white"
+            android:src="@drawable/youtube" />
+
+    </GridLayout>
+</LinearLayout>
+

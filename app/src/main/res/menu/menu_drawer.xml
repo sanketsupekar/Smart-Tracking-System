@@ -10,6 +10,10 @@
         android:title="About Us"
         android:icon="@drawable/ic_aboutus" />
     <item
+        android:id="@+id/contactus"
+        android:title="Contact Us"
+        android:icon="@drawable/ic_contact_phone" />
+    <item
         android:id="@+id/feedback"
         android:title="Feedback"
         android:icon="@drawable/ic_feedback" />

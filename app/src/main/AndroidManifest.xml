@@ -33,11 +33,12 @@
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
-        <activity android:name=".activity_about.about_project"
+
+        <activity
+            android:name=".activity_about.about_project"
             android:label="About Project">
 
         </activity>
-
         <activity
             android:name=".activity_history.LocationHistory"
             android:label="Location History" />
@@ -49,7 +50,7 @@
             android:label="Call Log" />
         <activity
             android:name=".activity_sms.smsLog"
-            android:label="SMS Log"></activity>
+            android:label="SMS Log" />
         <activity
             android:name=".activity_about.About_Tracker"
             android:label="About Software"></activity>
@@ -59,29 +60,33 @@
         <activity
             android:name=".activity_location.YourLocation"
             android:label="Traker" />
-        <!--
-             The API key for Google Maps-based APIs is defined as a string resource.
-             (See the file "res/values/google_maps_api.xml").
-             Note that the API key is linked to the encryption key used to sign the APK.
-             You need a different API key for each encryption key, including the release key that is used to
-             sign the APK for publishing.
-             You can define the keys for the debug and release targets in src/debug/ and src/release/.
-        -->
-        <!--
-             The API key for Google Maps-based APIs is defined as a string resource.
-             (See the file "res/values/google_maps_api.xml").
-             Note that the API key is linked to the encryption key used to sign the APK.
-             You need a different API key for each encryption key, including the release key that is used to
-             sign the APK for publishing.
-             You can define the keys for the debug and release targets in src/debug/ and src/release/.
-        -->
-        <activity android:name=".onBordingSlide.SliderBackground">
+        <activity android:name=".activity_about.contact_us"
+            android:label="Contact Us">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
+
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+        <activity android:name=".onBordingSlide.SliderBackground"></activity>
         <activity
             android:name=".Home"
             android:label="Home" />
