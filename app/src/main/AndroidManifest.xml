@@ -61,12 +61,8 @@
             android:name=".activity_location.YourLocation"
             android:label="Traker" />
         <activity android:name=".activity_about.contact_us"
-            android:label="Contact Us">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+             android:label="Contact Us">
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
 
         </activity>
 
@@ -86,7 +82,13 @@
              sign the APK for publishing.
              You can define the keys for the debug and release targets in src/debug/ and src/release/.
         -->
-        <activity android:name=".onBordingSlide.SliderBackground"></activity>
+        <activity android:name=".onBordingSlide.SliderBackground">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".Home"
             android:label="Home" />
