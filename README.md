@@ -17,3 +17,6 @@ Emergency Call (Pre-Define Number)
 Emergency SMS (Pre-Define Number) 
  
 ![IMG_20210617_094500-01](https://user-images.githubusercontent.com/72608053/139574296-349b8619-48f3-4da2-847d-b3fc22b4d73a.jpeg)
+
+![Tracker Circuit Diagram](https://user-images.githubusercontent.com/72608053/139574680-dd83301c-d7d4-43b1-a762-544d0f54b891.jpg)
+
