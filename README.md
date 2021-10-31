@@ -13,6 +13,5 @@ Languages Used:- Java, XML, C++.
 4. We provided two emergency features in this project -
 Emergency Call (Pre-Define Number)
 Emergency SMS (Pre-Define Number) 
- <br />
-### Project View
+ 
 ![IMG_20210617_094500-01](https://user-images.githubusercontent.com/72608053/139574296-349b8619-48f3-4da2-847d-b3fc22b4d73a.jpeg)
