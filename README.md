@@ -7,6 +7,8 @@ Project description
 Technology Used :- Android Studio, Firebase Database, Arduino IDE, GSM Based Modules.
 Languages Used:- Java, XML, C++.
 
+**GPS Tracker Code (Arduino IDE)** :- [](GPS_Tracker_with_Call_SMS.ino)
+
 1. In this Project we make our own GPS tracker using GSM module that means it doesn't require any Wi-Fi connection at all
 2. We developed our own Android Application with Real-time Firebase database for this tracking device
 3. It will work from any corner of the world and you will be able to track this project live using your Android Application.
