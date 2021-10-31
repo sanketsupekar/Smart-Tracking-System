@@ -1,7 +1,7 @@
 # Smart-Tracking-System
 
-<h> Smart Tracking System</h>
-May 2020 – Dec 2020
+Smart Tracking System
+(May 2020 – Dec 2020)
 
 Project description
 Technology Used :- Android Studio, Firebase Database, Arduino IDE, GSM Based Modules.
