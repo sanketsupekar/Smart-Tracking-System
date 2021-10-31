@@ -18,5 +18,10 @@ Emergency SMS (Pre-Define Number)
  
 ![IMG_20210617_094500-01](https://user-images.githubusercontent.com/72608053/139574296-349b8619-48f3-4da2-847d-b3fc22b4d73a.jpeg)
 
+![20201108_214933](https://user-images.githubusercontent.com/72608053/139574715-24b54dc4-7f59-4315-9323-e97f13b21b4b.jpg)
+
+![IMG_20210531_085204-01](https://user-images.githubusercontent.com/72608053/139574721-6550d442-a744-4af7-838a-cd7919c692de.jpeg)
+
+
 ![Tracker Circuit Diagram](https://user-images.githubusercontent.com/72608053/139574680-dd83301c-d7d4-43b1-a762-544d0f54b891.jpg)
 
