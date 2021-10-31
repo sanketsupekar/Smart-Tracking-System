@@ -91,7 +91,7 @@ public LinearLayout.LayoutParams params;
     {
                 StringBuffer sb = new StringBuffer();
                 Cursor managedCursor = getContentResolver().query(android.provider.CallLog.Calls.CONTENT_URI, null,
-                        android.provider.CallLog.Calls.CACHED_NAME+"= 'Papa'",null,null );
+                        android.provider.CallLog.Calls.NUMBER+"= '+917040715511'",null,null );
                 int name=managedCursor.getColumnIndex(android.provider.CallLog.Calls.CACHED_NAME);
                 int number = managedCursor.getColumnIndex(android.provider.CallLog.Calls.NUMBER);
                 int type = managedCursor.getColumnIndex(android.provider.CallLog.Calls.TYPE);

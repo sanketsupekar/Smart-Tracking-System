@@ -53,10 +53,14 @@
             android:label="SMS Log" />
         <activity
             android:name=".activity_about.About_Tracker"
-            android:label="About Software"></activity>
+            android:label="About Tracker">
+
+        </activity>
         <activity
             android:name=".activity_location.DeviceLocation"
-            android:label="Location" />
+            android:label="Location" >
+
+        </activity>
         <activity
             android:name=".activity_location.YourLocation"
             android:label="Traker" />

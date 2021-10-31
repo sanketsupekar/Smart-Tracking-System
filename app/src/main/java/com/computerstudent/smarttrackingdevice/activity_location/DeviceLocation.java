@@ -25,9 +25,11 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.text.SimpleDateFormat;
 import java.util.Arrays;
+import java.util.Date;
 
-public class DeviceLocation extends FragmentActivity implements OnMapReadyCallback {
+ public class DeviceLocation extends FragmentActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
     private DatabaseReference databaseReference;
@@ -43,7 +45,6 @@ public class DeviceLocation extends FragmentActivity implements OnMapReadyCallba
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_device_location);
-        // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
 
@@ -55,11 +56,13 @@ public class DeviceLocation extends FragmentActivity implements OnMapReadyCallba
                 try {
                     String latitude=snapshot.child("Latitude").getValue().toString();
                     String longitude=snapshot.child("Longitude").getValue().toString();
+                    SimpleDateFormat sdf = new SimpleDateFormat("yyyy.MM.dd G 'at' HH:mm:ss z");
+                    String currentDateandTime = sdf.format(new Date());
 
                     latLng = new LatLng(Double.parseDouble(latitude), Double.parseDouble(longitude));
 
-                    mMap.addMarker(new MarkerOptions().position(latLng).title(" , " ));
-                    mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, 10));
+                    mMap.addMarker(new MarkerOptions().position(latLng).title(currentDateandTime ));
+                   mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, 10));
 
 
                 } catch (Exception e) {
@@ -75,15 +78,7 @@ public class DeviceLocation extends FragmentActivity implements OnMapReadyCallba
 
     }
 
-    /**
-     * Manipulates the map once available.
-     * This callback is triggered when the map is ready to be used.
-     * This is where we can add markers or lines, add listeners or move the camera. In this case,
-     * we just add a marker near Sydney, Australia.
-     * If Google Play services is not installed on the device, the user will be prompted to install
-     * it inside the SupportMapFragment. This method will only be triggered once the user has
-     * installed Google Play services and returned to the app.
-     */
+
     @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
     public void onMapReady(GoogleMap googleMap) {
@@ -94,11 +89,7 @@ public class DeviceLocation extends FragmentActivity implements OnMapReadyCallba
         if (checkSelfPermission(Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && checkSelfPermission(Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             // TODO: Consider calling
             //    Activity#requestPermissions
-            // here to request the missing permissions, and then overriding
-            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-            //                                          int[] grantResults)
-            // to handle the case where the user grants the permission. See the documentation
-            // for Activity#requestPermissions for more details.
+
             return;
         }
 

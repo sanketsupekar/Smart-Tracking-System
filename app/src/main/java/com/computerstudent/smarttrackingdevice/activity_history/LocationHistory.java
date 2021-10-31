@@ -41,14 +41,6 @@ public class LocationHistory extends FragmentActivity implements OnMapReadyCallb
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
         databaseReference = FirebaseDatabase.getInstance().getReference("Location History");
-      /*  for (id=1;id<=12;id++) {
-            String time= String.valueOf(id);
-            SimpleDateFormat sdf = new SimpleDateFormat("yyyy.MM.dd G 'at' HH:mm:ss z");
-            String currentDateandTime = sdf.format(new Date());
-            LocationHistoryDatabase locationHistoryDatabase = new LocationHistoryDatabase(currentDateandTime, 18.1234, 19.1234);
-            databaseReference.child(time).setValue(locationHistoryDatabase);
-        }*/
-
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
