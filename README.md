@@ -7,6 +7,15 @@ Project description
 Technology Used :- Android Studio, Firebase Database, Arduino IDE, GSM Based Modules.
 Languages Used:- Java, XML, C++.
 
+Working Of Project :
+[Video](https://drive.google.com/file/d/1OzH9HdQrvWBm4e4w28cQzkzu01S_Wkde/view?usp=sharing)
+Project Presentation :
+[Video](https://drive.google.com/file/d/1R2nIUEXuAZnnRlaE7SPKsvmAyo2t4olP/view?usp=sharing)
+Project APK :
+[APK](https://drive.google.com/file/d/1E2UNl3iqYIQ8XE0Ty3hQj28Ayqm2Qzko/view?usp=sharing)
+Project Source Code GitHub :
+[Link](https://github.com/sanketsupekar/Smart-Tracking-System)
+
 **GPS Tracker Code (Arduino IDE)** :- [Link](https://github.com/sanketsupekar/Smart-Tracking-System/blob/master/GPS_Tracker_with_Call_SMS.ino)
 
 1. In this Project we make our own GPS tracker using GSM module that means it doesn't require any Wi-Fi connection at all
